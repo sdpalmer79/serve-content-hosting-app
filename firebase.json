@@ -1,0 +1,26 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+  "rewrites": [
+    {
+      "source": "/site{,/**}",
+      "run": {
+        "serviceId": "site-content",
+        "region": "me-west1"
+      }
+    },
+    {
+      "source": "**",
+      "run": {
+        "serviceId": "site-content",
+        "region": "me-west1"
+      }
+    }
+  ]
+  }
+}
