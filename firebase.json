@@ -1,26 +1,61 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-  "rewrites": [
+  "hosting": [
     {
-      "source": "/site{,/**}",
-      "run": {
-        "serviceId": "site-content",
-        "region": "me-west1"
-      }
+      "target": "serve-content",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/site{,/**}",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        },
+        {
+          "source": "**",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        }
+      ]
     },
     {
-      "source": "**",
-      "run": {
-        "serviceId": "site-content",
-        "region": "me-west1"
-      }
+      "target": "techwise-verbaworks",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "redirects": [
+        {
+          "source": "/",
+          "destination": "https://techwise.verbaworks.com/site?id=6666a6b3bf6e768c671c4fcf",
+          "type": 301
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "/site{,/**}",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        },
+        {
+          "source": "**",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        }
+      ]
     }
   ]
-  }
 }

@@ -1,5 +1,19 @@
 {
   "projects": {
     "default": "serve-content-427310"
-  }
+  },
+  "targets": {
+    "serve-content-427310": {
+      "hosting": {
+        "techwise-verbaworks": [
+          "techwise-verbaworks"
+        ],
+        "serve-content": [
+          "serve-content-427310"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
