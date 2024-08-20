@@ -33,7 +33,7 @@
       ]
     },
     {
-      "target": "moneywise-verbaworks",
+      "target": "pennyroots-verbaworks",
       "public": "public",
       "ignore": [
         "firebase.json",
@@ -43,7 +43,7 @@
       "redirects": [
         {
           "source": "/",
-          "destination": "https://moneywise.verbaworks.com/site?id=66af88036b1bbfdf9d9f33bb",
+          "destination": "https://pennyroots.verbaworks.com/site?id=66af88036b1bbfdf9d9f33bb",
           "type": 301
         }
       ],
