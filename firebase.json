@@ -8,13 +8,6 @@
         "**/.*",
         "**/node_modules/**"
       ],
-      "redirects": [
-        {
-          "source": "/",
-          "destination": "https://verbaworks.com/site?id=66af88036b1bbfdf9d9f33bb",
-          "type": 301
-        }
-      ],
       "rewrites": [
         {
           "source": "/site{,/**}",
@@ -44,6 +37,38 @@
         {
           "source": "/",
           "destination": "https://pennyroots.verbaworks.com/site?id=66af88036b1bbfdf9d9f33bb",
+          "type": 301
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "/site{,/**}",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        },
+        {
+          "source": "**",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        }
+      ]
+    },
+    {
+      "target": "almalia-verbaworks",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "redirects": [
+        {
+          "source": "/",
+          "destination": "https://almalia.verbaworks.com/site?id=66e841eb2d241ea0a06e42d1",
           "type": 301
         }
       ],
