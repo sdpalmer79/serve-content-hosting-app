@@ -27,7 +27,7 @@
     },
     {
       "target": "pennyroots-verbaworks",
-      "public": "public",
+      "public": "public/pennyroots",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -41,6 +41,10 @@
         }
       ],
       "rewrites": [
+        {
+          "source": "/sitemap.xml",
+          "destination": "/sitemap.xml"
+        },
         {
           "source": "/site{,/**}",
           "run": {
@@ -59,7 +63,7 @@
     },
     {
       "target": "almalia-verbaworks",
-      "public": "public",
+      "public": "public/almalia",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -73,6 +77,10 @@
         }
       ],
       "rewrites": [
+        {
+          "source": "/sitemap.xml",
+          "destination": "/sitemap.xml"
+        },
         {
           "source": "/site{,/**}",
           "run": {
