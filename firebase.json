@@ -96,6 +96,42 @@
           }
         }
       ]
+    },
+    {
+      "target": "alruwa-verbaworks",
+      "public": "public/alruwa",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "redirects": [
+        {
+          "source": "/",
+          "destination": "https://alruwa.verbaworks.com/site?id=66f50a7e229f572140b483e8",
+          "type": 301
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "/sitemap.xml",
+          "destination": "/sitemap.xml"
+        },
+        {
+          "source": "/site{,/**}",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        },
+        {
+          "source": "**",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        }
+      ]
     }
   ]
 }
