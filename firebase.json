@@ -168,6 +168,42 @@
           }
         }
       ]
+    },
+    {
+      "target": "aljusur-verbaworks",
+      "public": "public/aljusur",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "redirects": [
+        {
+          "source": "/",
+          "destination": "https://aljusur.verbaworks.com/site?id=673c567155a79a8642be0e96",
+          "type": 301
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "/sitemap.xml",
+          "destination": "/sitemap.xml"
+        },
+        {
+          "source": "/site{,/**}",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        },
+        {
+          "source": "**",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        }
+      ]
     }
   ]
 }
