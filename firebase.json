@@ -204,6 +204,42 @@
           }
         }
       ]
+    },
+    {
+      "target": "eafiti-verbaworks",
+      "public": "public/eafiti",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "redirects": [
+        {
+          "source": "/",
+          "destination": "https://eafiti.verbaworks.com/site?id=6771078699019fb587cdcc12",
+          "type": 301
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "/sitemap.xml",
+          "destination": "/sitemap.xml"
+        },
+        {
+          "source": "/site{,/**}",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        },
+        {
+          "source": "**",
+          "run": {
+            "serviceId": "site-content",
+            "region": "me-west1"
+          }
+        }
+      ]
     }
   ]
 }
